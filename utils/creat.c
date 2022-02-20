@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:59:41 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/02/08 15:58:51 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/02/20 11:29:55 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ t_list	*creat_list_a(char **av)
 	temp = ft_lstnew(ft_atoi(av[0]));
 	temp->next = NULL;
 	while (av[i])
-		ft_lstadd_back(&temp, ft_lstnew(ft_atoi(av[i++])));
+	{
+		ft_lstadd_back(&temp, ft_lstnew(ft_atoi(av[i])));
+		i++;
+	}
 	return (temp);
 }
 
