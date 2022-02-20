@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 13:36:50 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/02/08 13:46:00 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/02/20 11:07:35 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (!(c >= 48 && c <= 57) && c != '-')
+	if (!(c >= 48 && c <= 57) && c != '-' && c != '+')
 		return (0);
 	else
 		return (1);
@@ -31,7 +31,8 @@ int	check_if_digit(char **list)
 		j = 0;
 		while (list[i][j])
 		{
-			if (ft_isdigit(list[i][j]) == 0)
+			if (ft_isdigit(list[i][j]) == 0 || (ft_isdigit(list[i][j]) == 1
+				&& (list[i][j + 1] == '-' || list[i][j + 1] == '+')))
 				return (free_list(list), 1);
 			j++;
 		}
