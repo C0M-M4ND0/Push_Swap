@@ -14,11 +14,13 @@ Using ``make`` will create the ``push_swap`` executable.
 Using ``make bonus`` will create the ``checker`` executable.
 
 Simply run it with :
-
+ 
+ For mandatory :
 ```
 ./push_swap <Random list of Numbers>
 ```
-or 
+ For bonus :
+ 
 ```
-./push_swap <Random list of Numberse>
+./checker <Random list of Numberse>
 ```
