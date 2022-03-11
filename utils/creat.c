@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:59:41 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/02/20 11:29:55 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/11 15:17:52 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ char	**get_list(char **av)
 	int		i;
 
 	i = 1;
-	string = malloc(1);
+	string = malloc(sizeof(char));
+	if (string == NULL)
+		return (NULL);
 	string[0] = '\0';
 	while (av[i])
 	{
