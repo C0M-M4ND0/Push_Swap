@@ -1,7 +1,7 @@
 # Push_Swap
-# This project about coding a program that can Sort Data on a Stack Using some function with a limit instruction .
+## This project about coding a program that can Sort Data on a Stack Using some function with a limit instruction .
   see the ``en.subject.pdf``
-## Final grade : 125/100
+### Final grade : 125/100
 
 Mandatory part : 94/100
 
