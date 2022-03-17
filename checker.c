@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 08:39:10 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/02/09 13:01:21 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/17 10:38:14 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	apply(char *stru, t_list **list_a, t_list **list_b, int order)
 	return (0);
 }
 
-int	read_from_standard_output(t_list **list_a, t_list **list_b)
+int	read_from_standard_input(t_list **list_a, t_list **list_b)
 {
 	char	*read;
 	int		order;
