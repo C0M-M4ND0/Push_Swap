@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 08:39:10 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/03/17 10:38:14 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/24 09:32:58 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*get_line(int fd)
 	if (str[0] == '\0')
 		return (NULL);
 	line = malloc(i + 1);
+	if (line == NULL)
+		return (NULL);
 	i = -1;
 	while (str[++i])
 		line[i] = str[i];
