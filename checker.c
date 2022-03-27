@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 08:39:10 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/03/27 09:54:23 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/27 10:32:40 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,11 +115,11 @@ int	main(int ac, char **av)
 		return (0);
 	list = get_list(av);
 	if (check_args(av) == 1)
-		return (write(2, "ERROR\n", 6), 0);
+		return (write(2, "ERROR\n", 6), 1);
 	list_a = creat_list_a(list);
 	if (check_if_digit(list) == 1
 		|| ft_isduplicated(list_a, ac - 1) == 1)
-		return (write(2, "ERROR\n", 6), ft_lstclear(&list_a), 0);
+		return (write(2, "ERROR\n", 6), ft_lstclear(&list_a), 1);
 	list_b = NULL;
 	read_from_standard_input(&list_a, &list_b);
 	return (0);
