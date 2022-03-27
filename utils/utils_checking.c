@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 13:36:50 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/02/20 11:07:35 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/27 09:29:22 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,13 @@ int	ft_isduplicated(t_list *list, int len)
 	}
 	bubble_sort(arry, len);
 	i = 0;
-	while (i < len)
+	while (i < (len - 1))
 	{
 		if (arry[i] == arry[i + 1])
 			return (free(arry), 1);
 		i++;
 	}
-	return (free(arry), -1);
+	return (free(arry), 0);
 }
 
 int	is_sorted_a(t_list *list_a)
