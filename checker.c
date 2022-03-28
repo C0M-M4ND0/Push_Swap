@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 08:39:10 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/03/27 10:32:40 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/28 11:11:43 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	apply(char *stru, t_list **list_a, t_list **list_b, int order)
 	else if (ft_strcmp("rrr\n", stru) == 0)
 		rverse_rotate_a_and_b(list_a, list_b, order);
 	else
-		return (2);
+		return (1);
 	return (0);
 }
 
@@ -94,7 +94,7 @@ int	read_from_standard_input(t_list **list_a, t_list **list_b)
 		read = get_line(0);
 		if (read == NULL)
 			break ;
-		if (apply(read, list_a, list_b, order) == 2)
+		if (apply(read, list_a, list_b, order) == 1)
 			return (write(2, "ERROR\n", 6), free(read), ft_lstclear(list_a), 1);
 	}
 	free(read);
