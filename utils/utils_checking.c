@@ -6,7 +6,7 @@
 /*   By: oabdelha <oabdelha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 13:36:50 by oabdelha          #+#    #+#             */
-/*   Updated: 2022/03/27 09:29:22 by oabdelha         ###   ########.fr       */
+/*   Updated: 2022/03/30 11:52:52 by oabdelha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ int	check_if_digit(char **list)
 		while (list[i][j])
 		{
 			if (ft_isdigit(list[i][j]) == 0 || (ft_isdigit(list[i][j]) == 1
-				&& (list[i][j + 1] == '-' || list[i][j + 1] == '+')))
+				&& (list[i][j + 1] == '-' || list[i][j + 1] == '+'))
+				|| ((list[i][j] == '+' || list[i][j] == '-')
+				&& (!ft_isdigit(list[i][j + 1]))))
 				return (free_list(list), 1);
 			j++;
 		}
